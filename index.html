@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicador constante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="w-vw flex justify-center mt-6">
+        <h1 style="font-family: 'Comic Neue', cursive; font-weight: bold; font-size: 24px;">Algoritmos de multiplicador constante</h1>
+    </div>
+    <div class="w-vw flex flex-col justify-center items-center">
+        <section class="flex gap-6 mt-6">
+            <div class="relative">
+                <input type="number" id="value-n" class="Ingresando" placeholder="0" style="font-family: 'Comic Neue', cursive;"/>
+                <label for="value-n" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1" style="font-family: 'Comic Neue', cursive;">N° iteraciones</label>
+            </div>
+            <div class="relative">
+                <input type="number" id="value-seed" class="Ingresando" placeholder="0" style="font-family: 'Comic Neue', cursive;"/>
+                <label for="value-seed" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1" style="font-family: 'Comic Neue', cursive;">Semilla (Xo)</label>
+            </div>        
+        </section>
+        <section class="flex gap-6 mt-6">
+            <div class="relative">
+                <input type="number" id="value-a" class="Ingresando" placeholder="0" style="font-family: 'Comic Neue', cursive;"/>
+                <label for="value-a" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1" style="font-family: 'Comic Neue', cursive;">Constante (a)</label>
+            </div>
+            <div class="relative">
+                <input type="number" id="value-d" class="Ingresando" placeholder="0" style="font-family: 'Comic Neue', cursive;"/>
+                <label for="value-d" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1" style="font-family: 'Comic Neue', cursive;">Cantidad de digitos</label>
+            </div>
+        </section>
+        <button onclick="calcular()" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800 mt-6" style="font-family: 'Comic Neue', cursive; font-weight: bold; font-size: 18px;">Calcular</button>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="w-vw flex justify-center">
+        <table class="w-2xl text-sm text-left text-gray-500 dark:text-gray-400 relative overflow-x-auto shadow-md sm:rounded-lg px-6">
+            <thead class="text-xs text-gray-700 uppercase bg-blue-100 dark:bg-blue-700 dark:text-gray-400">
+                <tr>
+                    <th class="px-6 py-3" style="font-family: 'Comic Neue', cursive; font-weight: bold;">N°</th>
+                    <th class="px-6 py-3" style="font-family: 'Comic Neue', cursive; font-weight: bold;">Semilla</th>
+                    <th class="px-6 py-3" style="font-family: 'Comic Neue', cursive; font-weight: bold;">Producto</th>
+                    <th class="px-6 py-3" style="font-family: 'Comic Neue', cursive; font-weight: bold;">Nueva semilla</th>
+                    <th class="px-6 py-3"style="font-family: 'Comic Neue', cursive; font-weight: bold;">Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="container-content">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="./code.js"></script>
+</body>
+</html>
